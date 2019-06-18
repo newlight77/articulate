@@ -79,14 +79,14 @@ module.exports = new Confidence.Store({
 
                 plugin: './plugins/rasa-nlu',
                 options: { //options passed to axios
-                    baseURL: process.env.RASA_URL || 'http://rasa:5000'
+                    baseURL: process.env.RASA_URL || 'http://oneprofile.io:5000'
                 }
             },
             {
 
                 plugin: './plugins/duckling',
                 options: { //options passed to axios
-                    baseURL: process.env.DUCKLING_URL || 'http://localhost:8000'
+                    baseURL: process.env.DUCKLING_URL || 'http://oneprofile.io:8000'
                 }
             },
             {
@@ -96,7 +96,7 @@ module.exports = new Confidence.Store({
             {
                 plugin: './plugins/es',
                 options: {
-                    host: process.env.ES_HOST || 'http://elasticsearch:9200',
+                    host: process.env.ES_HOST || 'http://oneprofile.io:9200',
                     log: process.env.ES_LOG || 'error'
                 }
             },
