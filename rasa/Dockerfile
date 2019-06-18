@@ -25,16 +25,8 @@ RUN pip install -r alt_requirements/requirements_spacy_sklearn.txt
 
 RUN pip install -e .
 
-RUN pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.0.0/en_core_web_md-2.0.0.tar.gz --no-cache-dir > /dev/null \
-    && python -m spacy link en_core_web_md en
-RUN pip install https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-2.0.0/de_core_news_sm-2.0.0.tar.gz --no-cache-dir > /dev/null \
-    && python -m spacy link de_core_news_sm de
 RUN pip install https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-2.0.0/fr_core_news_md-2.0.0.tar.gz --no-cache-dir > /dev/null \
     && python -m spacy link fr_core_news_md fr
-RUN pip install https://github.com/explosion/spacy-models/releases/download/es_core_news_md-2.0.0/es_core_news_md-2.0.0.tar.gz --no-cache-dir > /dev/null \
-    && python -m spacy link es_core_news_md es
-RUN pip install https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-2.0.0/pt_core_news_sm-2.0.0.tar.gz --no-cache-dir > /dev/null \
-    && python -m spacy link pt_core_news_sm pt
 
 RUN cp  sample_configs/config_spacy_duckling.yml ${RASA_NLU_HOME}/config.yml
 

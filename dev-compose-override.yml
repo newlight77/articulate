@@ -3,7 +3,7 @@ version: '3.0'
 services:
   api:
     build: './api/.'
-    ports: ['7500']
+    ports: ['7500:7500']
   ui:
     ports: ['3000:3000']
     build:
